@@ -1,21 +1,14 @@
+[manager]
+
 linemode = "size_and_mtime"
 show_hidden = true
 show_symlinks = true
-sort_by = "name"
+sort_by = "alphabetical"
 sort_order = "ascending"
 sort_case_insensitive = true
 show_icons = true
-show_preview = true
-preview_size = 0.5
-preview_type = "image"
-preview_width = 0.5
-preview_height = 0.5
-show_preview_in_fullscreen = true
-preview_position = "top"
-preview_background = "#000000"
-fullscreen_preview_size = 0.5
-fullscreen_preview_type = "image"
-fullscreen_preview_width = 0.5
-fullscreen_preview_height = 0.5
-fullscreen_preview_position = "top"
-fullscreen_preview_background = "#000000"
+
+[opener]
+edit = [
+    {run = 'nvim "$@"', block = true, for = "unix"}
+]

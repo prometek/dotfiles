@@ -19,7 +19,9 @@ export PATH=/opt/homebrew/bin:$PATH
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="daivasmara"
-
+source ~/.config/.zsh/catppuccin_latte-zsh-syntax-highlighting.zsh
+# ZSH_THEME="catppuccin"
+# now load zsh-syntax-highlighting plugin
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -139,3 +141,4 @@ source <(ng completion script)
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export RUST_SRC_PATH="/Users/guillaume/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/src"
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
