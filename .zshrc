@@ -19,7 +19,7 @@ export PATH=/opt/homebrew/bin:$PATH
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="daivasmara"
-source ~/.config/.zsh/catppuccin_latte-zsh-syntax-highlighting.zsh
+source ~/.config/.zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh
 # ZSH_THEME="catppuccin"
 # now load zsh-syntax-highlighting plugin
 # Set list of themes to pick from when loading at random
