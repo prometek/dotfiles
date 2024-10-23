@@ -141,4 +141,5 @@ source <(ng completion script)
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export RUST_SRC_PATH="/Users/guillaume/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/src"
+export PATH="$HOME/.cargo/bin:$PATH"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

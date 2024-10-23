@@ -16,4 +16,7 @@ bold = {family = "Hack Nerd Font", style = "Bold"}
 italic = {family = "Hack Nerd Font", style = "Italic"}
 bold_italic = {family = "Hack Nerd Font", style = "Bold Italic"}
 
-
+[window]
+opacity = 0.9
+padding.x = 12
+padding.y = 12
