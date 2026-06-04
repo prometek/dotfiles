@@ -27,5 +27,4 @@ vim.opt.updatetime = 50
 
 --vim.opt.colorcolumn = "80"
 
-vim.g.leaderkey = " "
 vim.opt.whichwrap:append "<>[]hl"

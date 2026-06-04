@@ -1,3 +1,7 @@
+-- mapleader must be set before remap loads so <leader> maps bind to <space>
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 require("set")
 require("remap")
 -- Bootstrap lazy.nvim
@@ -18,11 +22,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.o.termguicolors = true
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -33,7 +32,7 @@ require("lazy").setup({
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = { enabled = true, notify = false },
 })
 
 vim.cmd.colorscheme "catppuccin"

@@ -125,7 +125,7 @@ cmp.setup({
                                     noremap=true,
                                     silent=true})
                             end
-                            buf_map(bufnr, 'n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+                            buf_map(bufnr, 'n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>')
                         end,
                         capabilities = capabilities,
                         settings = {
@@ -136,12 +136,13 @@ cmp.setup({
                     })
                 end,
                 ["pyright"] = function()
-                    lspconfig = require("lspconfig")
+                    local lspconfig = require("lspconfig")
                     lspconfig.pyright.setup({
+                        capabilities = capabilities,
                     })
                 end,
                 ["rust_analyzer"] = function()
-                    lspconfig = require("lspconfig")
+                    local lspconfig = require("lspconfig")
                     lspconfig.rust_analyzer.setup({
                         capabilities = capabilities,
                         settings = {
@@ -164,7 +165,7 @@ cmp.setup({
                 focusable = false,
                 style = "minimal",
                 border = "rounded",
-                source = "always",
+                source = true,
                 header = "",
                 prefix = "",
             },
