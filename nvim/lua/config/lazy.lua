@@ -33,6 +33,8 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   -- automatically check for plugin updates
   checker = { enabled = true, notify = false },
+  -- No plugins need luarocks; disable hererocks to silence health errors.
+  rocks = { enabled = false },
 })
 
 vim.cmd.colorscheme "catppuccin"

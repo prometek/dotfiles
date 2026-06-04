@@ -15,7 +15,7 @@ map("n", "<leader>/", "gcc", { desc = "Toggle Comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "Toggle comment", remap = true })
 
 map("n", "<leader>fm", function()
-  vim.lsp.buf.format()
+  require("conform").format { lsp_fallback = true }
 end, { desc = "General Format file" })
 
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "General Save file" })
