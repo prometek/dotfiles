@@ -19,7 +19,7 @@ export PATH=/opt/homebrew/bin:$PATH
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="daivasmara"
-source ~/.config/.zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh
+source ~/.config/.zsh/zsh-syntax-highlighting/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
 # ZSH_THEME="catppuccin"
 # now load zsh-syntax-highlighting plugin
 # Set list of themes to pick from when loading at random
@@ -143,3 +143,13 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export RUST_SRC_PATH="/Users/guillaume/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/src"
 export PATH="$HOME/.cargo/bin:$PATH"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Created by `pipx` on 2026-03-15 21:27:30
+export PATH="$PATH:/Users/guillaume/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Mistral API (codecompanion + minuet)
+export MISTRAL_API_KEY="REDACTED"

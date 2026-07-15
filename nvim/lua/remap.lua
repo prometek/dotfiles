@@ -20,3 +20,20 @@ end, { desc = "General Format file" })
 
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "General Save file" })
 map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "General Copy whole file" })
+
+-- Copy diagnostic(s) under cursor to system clipboard
+map("n", "<leader>yd", function()
+  local lnum = vim.api.nvim_win_get_cursor(0)[1] - 1
+  local diags = vim.diagnostic.get(0, { lnum = lnum })
+  if vim.tbl_isempty(diags) then
+    vim.notify("No diagnostic on line", vim.log.levels.WARN)
+    return
+  end
+  local msgs = {}
+  for _, d in ipairs(diags) do
+    table.insert(msgs, d.message)
+  end
+  local text = table.concat(msgs, "\n")
+  vim.fn.setreg("+", text)
+  vim.notify("Diagnostic copied: " .. text)
+end, { desc = "Yank line diagnostics to clipboard" })

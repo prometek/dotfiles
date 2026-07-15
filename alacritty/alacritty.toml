@@ -1,7 +1,7 @@
 import = [
   # uncomment the flavour you want below:
-  # "~/.config/alacritty/catppuccin-latte.toml"
-  "~/.config/alacritty/catppuccin-frappe.toml"
+  "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
 # "~/.config/alacritty/catppuccin-macchiato.toml"
   # "~/.config/alacritty/catppuccin-mocha.toml"
 ]
@@ -17,6 +17,6 @@ italic = {family = "Hack Nerd Font", style = "Italic"}
 bold_italic = {family = "Hack Nerd Font", style = "Bold Italic"}
 
 [window]
-opacity = 0.9
+opacity = 1.0
 padding.x = 12
 padding.y = 12

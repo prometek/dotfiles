@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 
 linemode = "size_and_mtime"
 show_hidden = true
@@ -10,5 +10,7 @@ show_icons = true
 
 [opener]
 edit = [
-    {run = 'nvim "$@"', block = true, for = "unix"}
+    # Inside an embedded nvim ($NVIM set) yazi.nvim opens the file in the parent
+    # editor, so don't spawn a nested nvim. Standalone yazi still edits normally.
+    {run = '[ -n "$NVIM" ] || nvim "$@"', block = true, for = "unix"}
 ]
